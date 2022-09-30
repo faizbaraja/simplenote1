@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         notesCollection = DataAccess.getNote()
-        tableListNotes.reloadData()
+        tableListNotes.reloadData() 
         super.viewDidAppear(animated)
     }
     
