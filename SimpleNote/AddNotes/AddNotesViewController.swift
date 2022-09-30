@@ -15,7 +15,6 @@ class AddNotesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Add Notes"
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func saveNote(sender: UIButton) {
