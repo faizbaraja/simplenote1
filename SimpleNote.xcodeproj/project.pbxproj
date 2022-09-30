@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4082D5D28E6FCB300B5F781 /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4082D5C28E6FCB300B5F781 /* DataAccess.swift */; };
 		F48513CD28E6EB3100F7B02A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48513CC28E6EB3100F7B02A /* AppDelegate.swift */; };
 		F48513D628E6EB3400F7B02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48513D528E6EB3400F7B02A /* Assets.xcassets */; };
 		F48513D928E6EB3400F7B02A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48513D728E6EB3400F7B02A /* LaunchScreen.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F4082D5C28E6FCB300B5F781 /* DataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
 		F48513C928E6EB3100F7B02A /* SimpleNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48513CC28E6EB3100F7B02A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F48513D528E6EB3400F7B02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4082D5B28E6FC9B00B5F781 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F4082D5C28E6FCB300B5F781 /* DataAccess.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		F48513C028E6EB3100F7B02A = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		F48513CB28E6EB3100F7B02A /* SimpleNote */ = {
 			isa = PBXGroup;
 			children = (
+				F4082D5B28E6FC9B00B5F781 /* Utilities */,
 				F485140B28E6F1DE00F7B02A /* extension */,
 				F485140628E6EFE100F7B02A /* Models */,
 				F485140128E6ED9300F7B02A /* AddNotes */,
@@ -316,6 +327,7 @@
 				F485140F28E6F24000F7B02A /* Enums.swift in Sources */,
 				F48513CD28E6EB3100F7B02A /* AppDelegate.swift in Sources */,
 				F485140428E6EDA500F7B02A /* AddNotesViewController.swift in Sources */,
+				F4082D5D28E6FCB300B5F781 /* DataAccess.swift in Sources */,
 				F485141128E6F28600F7B02A /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
