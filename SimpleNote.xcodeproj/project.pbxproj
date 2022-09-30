@@ -17,6 +17,11 @@
 		F485140028E6EC0400F7B02A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48513FE28E6EC0400F7B02A /* ViewController.xib */; };
 		F485140428E6EDA500F7B02A /* AddNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485140228E6EDA500F7B02A /* AddNotesViewController.swift */; };
 		F485140528E6EDA500F7B02A /* AddNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F485140328E6EDA500F7B02A /* AddNotesViewController.xib */; };
+		F485140828E6EFFF00F7B02A /* NoteStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485140728E6EFFF00F7B02A /* NoteStructure.swift */; };
+		F485140A28E6F0CC00F7B02A /* AddNotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485140928E6F0CC00F7B02A /* AddNotesViewModel.swift */; };
+		F485140D28E6F1F900F7B02A /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485140C28E6F1F900F7B02A /* UserDefaultExtension.swift */; };
+		F485140F28E6F24000F7B02A /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485140E28E6F24000F7B02A /* Enums.swift */; };
+		F485141128E6F28600F7B02A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485141028E6F28600F7B02A /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		F48513FE28E6EC0400F7B02A /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		F485140228E6EDA500F7B02A /* AddNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesViewController.swift; sourceTree = "<group>"; };
 		F485140328E6EDA500F7B02A /* AddNotesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNotesViewController.xib; sourceTree = "<group>"; };
+		F485140728E6EFFF00F7B02A /* NoteStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStructure.swift; sourceTree = "<group>"; };
+		F485140928E6F0CC00F7B02A /* AddNotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesViewModel.swift; sourceTree = "<group>"; };
+		F485140C28E6F1F900F7B02A /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
+		F485140E28E6F24000F7B02A /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		F485141028E6F28600F7B02A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +111,16 @@
 		F48513CB28E6EB3100F7B02A /* SimpleNote */ = {
 			isa = PBXGroup;
 			children = (
+				F485140B28E6F1DE00F7B02A /* extension */,
+				F485140628E6EFE100F7B02A /* Models */,
 				F485140128E6ED9300F7B02A /* AddNotes */,
 				F48513FC28E6EBED00F7B02A /* HomePage */,
 				F48513CC28E6EB3100F7B02A /* AppDelegate.swift */,
 				F48513D528E6EB3400F7B02A /* Assets.xcassets */,
 				F48513D728E6EB3400F7B02A /* LaunchScreen.storyboard */,
 				F48513DA28E6EB3400F7B02A /* Info.plist */,
+				F485140E28E6F24000F7B02A /* Enums.swift */,
+				F485141028E6F28600F7B02A /* Protocols.swift */,
 			);
 			path = SimpleNote;
 			sourceTree = "<group>";
@@ -142,8 +156,25 @@
 			children = (
 				F485140228E6EDA500F7B02A /* AddNotesViewController.swift */,
 				F485140328E6EDA500F7B02A /* AddNotesViewController.xib */,
+				F485140928E6F0CC00F7B02A /* AddNotesViewModel.swift */,
 			);
 			path = AddNotes;
+			sourceTree = "<group>";
+		};
+		F485140628E6EFE100F7B02A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F485140728E6EFFF00F7B02A /* NoteStructure.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F485140B28E6F1DE00F7B02A /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				F485140C28E6F1F900F7B02A /* UserDefaultExtension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F485140A28E6F0CC00F7B02A /* AddNotesViewModel.swift in Sources */,
 				F48513FF28E6EC0400F7B02A /* ViewController.swift in Sources */,
+				F485140D28E6F1F900F7B02A /* UserDefaultExtension.swift in Sources */,
+				F485140828E6EFFF00F7B02A /* NoteStructure.swift in Sources */,
+				F485140F28E6F24000F7B02A /* Enums.swift in Sources */,
 				F48513CD28E6EB3100F7B02A /* AppDelegate.swift in Sources */,
 				F485140428E6EDA500F7B02A /* AddNotesViewController.swift in Sources */,
+				F485141128E6F28600F7B02A /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

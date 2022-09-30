@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNotesViewController" customModule="SimpleNote" customModuleProvider="target">
             <connections>
+                <outlet property="textFieldCategory" destination="ZI8-qV-TeF" id="zYm-0b-dHh"/>
+                <outlet property="textFieldDesc" destination="mk3-Bs-b71" id="gA9-Mu-qAp"/>
+                <outlet property="textFieldTitle" destination="d34-wN-gHK" id="KMY-sm-Zbx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,22 +22,38 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Judul" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d34-wN-gHK">
-                    <rect key="frame" x="10" y="88" width="394" height="34"/>
+                    <rect key="frame" x="10" y="64" width="394" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kategori" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZI8-qV-TeF">
-                    <rect key="frame" x="10" y="130" width="394" height="34"/>
+                    <rect key="frame" x="10" y="106" width="394" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7z7-f5-A5h">
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZZ-rl-9Ze">
                     <rect key="frame" x="10" y="821" width="394" height="31"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Simpan"/>
-                </button>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7z7-f5-A5h">
+                            <rect key="frame" x="0.0" y="0.0" width="197" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Simpan"/>
+                            <connections>
+                                <action selector="saveNoteWithSender:" destination="-1" eventType="touchUpInside" id="iid-7t-kkx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aF-Fc-NQL">
+                            <rect key="frame" x="197" y="0.0" width="197" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Ambil"/>
+                            <connections>
+                                <action selector="getNoteWithSender:" destination="-1" eventType="touchUpInside" id="USu-0k-UZA"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Catatan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mk3-Bs-b71">
-                    <rect key="frame" x="10" y="174" width="394" height="34"/>
+                    <rect key="frame" x="10" y="150" width="394" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -44,17 +63,17 @@
             <constraints>
                 <constraint firstItem="mk3-Bs-b71" firstAttribute="top" secondItem="ZI8-qV-TeF" secondAttribute="bottom" constant="10" id="5b1-cG-hc7"/>
                 <constraint firstItem="d34-wN-gHK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="5eR-M8-wpK"/>
-                <constraint firstItem="d34-wN-gHK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="81c-d8-VU6"/>
+                <constraint firstItem="d34-wN-gHK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="81c-d8-VU6"/>
                 <constraint firstItem="ZI8-qV-TeF" firstAttribute="top" secondItem="d34-wN-gHK" secondAttribute="bottom" constant="8" symbolic="YES" id="82x-7x-Xjp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7z7-f5-A5h" secondAttribute="trailing" constant="10" id="9mw-DR-nUV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d34-wN-gHK" secondAttribute="trailing" constant="10" id="GsN-tC-CTD"/>
                 <constraint firstItem="d34-wN-gHK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="HyM-hv-Mp1"/>
                 <constraint firstItem="ZI8-qV-TeF" firstAttribute="trailing" secondItem="d34-wN-gHK" secondAttribute="trailing" id="MwG-RX-kTG"/>
                 <constraint firstItem="mk3-Bs-b71" firstAttribute="leading" secondItem="d34-wN-gHK" secondAttribute="leading" id="W3G-z1-A7B"/>
                 <constraint firstItem="ZI8-qV-TeF" firstAttribute="leading" secondItem="d34-wN-gHK" secondAttribute="leading" id="ZJb-jG-UWl"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7z7-f5-A5h" secondAttribute="bottom" constant="10" id="acb-1Z-mpe"/>
                 <constraint firstItem="mk3-Bs-b71" firstAttribute="trailing" secondItem="d34-wN-gHK" secondAttribute="trailing" id="czN-92-2JR"/>
-                <constraint firstItem="7z7-f5-A5h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="nrL-Jw-Nr0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sZZ-rl-9Ze" secondAttribute="bottom" constant="10" id="eFP-TE-Mxx"/>
+                <constraint firstItem="sZZ-rl-9Ze" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="h9G-gm-utZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sZZ-rl-9Ze" secondAttribute="trailing" constant="10" id="jqj-nD-Ffh"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
         </view>
