@@ -18,14 +18,6 @@ class AddNotesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func getNote(sender: UIButton) {
-        if let myNotes = viewModel.getNote() {
-            print(myNotes.noteTitle)
-            print(myNotes.noteCategory)
-            print(myNotes.noteDescription)
-        }
-    }
-    
     @IBAction func saveNote(sender: UIButton) {
         viewModel.saveNote(noteTitle: textFieldTitle.text, noteCategory: textFieldCategory.text, noteDescription: textFieldDesc.text)
     }

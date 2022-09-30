@@ -10,28 +10,29 @@ import UIKit
 class AddNotesViewModel: NSObject {
     
     func saveNote(noteTitle: String?, noteCategory: String?, noteDescription: String?) {
-        let noteObject = NoteStructure (noteTitle: noteTitle,
+        var currentNotes = getNote()
+        let noteObject = NoteStructure(noteTitle: noteTitle,
                                         noteCategory: noteCategory,
                                         noteDescription: noteDescription)
         
-        
+        currentNotes.append(noteObject)
         let userDefaults = UserDefaults.standard
         do {
-            try userDefaults.setObject(noteObject, forKey: "MyNotesList")
+            try userDefaults.setObject(currentNotes, forKey: "MyNotesList")
         } catch {
             print(error.localizedDescription)
         }
     }
     
-    func getNote() -> NoteStructure? {
+    func getNote() -> [NoteStructure] {
         let userDefaults = UserDefaults.standard
         do {
-            let myNotes = try userDefaults.getObject(forKey: "MyNotesList", castTo: NoteStructure.self)
+            let myNotes = try userDefaults.getObject(forKey: "MyNotesList", castTo: [NoteStructure].self)
             print(myNotes)
             return myNotes
         } catch {
             print(error.localizedDescription)
-            return nil
+            return []
         }        
     }
 
