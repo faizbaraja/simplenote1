@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNotesViewController" customModule="SimpleNote" customModuleProvider="target">
             <connections>
+                <outlet property="buttonCategorySelector" destination="erC-i1-cQ6" id="Ose-R5-icz"/>
                 <outlet property="textFieldCategory" destination="ZI8-qV-TeF" id="zYm-0b-dHh"/>
                 <outlet property="textFieldDesc" destination="mk3-Bs-b71" id="gA9-Mu-qAp"/>
                 <outlet property="textFieldTitle" destination="d34-wN-gHK" id="KMY-sm-Zbx"/>
@@ -26,7 +27,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kategori" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZI8-qV-TeF">
+                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kategori" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZI8-qV-TeF">
                     <rect key="frame" x="10" y="106" width="394" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -37,7 +38,7 @@
                         <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7z7-f5-A5h">
                             <rect key="frame" x="0.0" y="0.0" width="394" height="31"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Simpan"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Simpan"/>
                             <connections>
                                 <action selector="saveNoteWithSender:" destination="-1" eventType="touchUpInside" id="iid-7t-kkx"/>
                             </connections>
@@ -49,18 +50,32 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erC-i1-cQ6">
+                    <rect key="frame" x="10" y="106" width="394" height="34"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Kategori">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="openNotesCategoryWithSender:" destination="-1" eventType="touchUpInside" id="0fG-29-oAp"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="mk3-Bs-b71" firstAttribute="top" secondItem="ZI8-qV-TeF" secondAttribute="bottom" constant="10" id="5b1-cG-hc7"/>
                 <constraint firstItem="d34-wN-gHK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="5eR-M8-wpK"/>
+                <constraint firstItem="erC-i1-cQ6" firstAttribute="bottom" secondItem="ZI8-qV-TeF" secondAttribute="bottom" id="5ul-PY-odf"/>
                 <constraint firstItem="d34-wN-gHK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="81c-d8-VU6"/>
                 <constraint firstItem="ZI8-qV-TeF" firstAttribute="top" secondItem="d34-wN-gHK" secondAttribute="bottom" constant="8" symbolic="YES" id="82x-7x-Xjp"/>
+                <constraint firstItem="erC-i1-cQ6" firstAttribute="centerY" secondItem="ZI8-qV-TeF" secondAttribute="centerY" id="D0Y-sT-eJc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d34-wN-gHK" secondAttribute="trailing" constant="10" id="GsN-tC-CTD"/>
                 <constraint firstItem="d34-wN-gHK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="HyM-hv-Mp1"/>
                 <constraint firstItem="ZI8-qV-TeF" firstAttribute="trailing" secondItem="d34-wN-gHK" secondAttribute="trailing" id="MwG-RX-kTG"/>
+                <constraint firstItem="erC-i1-cQ6" firstAttribute="trailing" secondItem="ZI8-qV-TeF" secondAttribute="trailing" id="P6H-MQ-j9G"/>
                 <constraint firstItem="mk3-Bs-b71" firstAttribute="leading" secondItem="d34-wN-gHK" secondAttribute="leading" id="W3G-z1-A7B"/>
+                <constraint firstItem="erC-i1-cQ6" firstAttribute="leading" secondItem="ZI8-qV-TeF" secondAttribute="leading" id="XcM-Xj-byE"/>
                 <constraint firstItem="ZI8-qV-TeF" firstAttribute="leading" secondItem="d34-wN-gHK" secondAttribute="leading" id="ZJb-jG-UWl"/>
                 <constraint firstItem="mk3-Bs-b71" firstAttribute="trailing" secondItem="d34-wN-gHK" secondAttribute="trailing" id="czN-92-2JR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sZZ-rl-9Ze" secondAttribute="bottom" constant="10" id="eFP-TE-Mxx"/>
