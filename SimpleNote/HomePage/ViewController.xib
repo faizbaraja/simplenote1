@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="SimpleNote" customModuleProvider="target">
             <connections>
+                <outlet property="collectionListNotes" destination="PSO-LO-iCt" id="JP9-g9-i2W"/>
                 <outlet property="tableListNotes" destination="EdK-Dv-gBB" id="i1r-kp-7Jb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,14 +28,32 @@
                         <outlet property="delegate" destination="-1" id="kgy-We-6Ge"/>
                     </connections>
                 </tableView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PSO-LO-iCt">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GJZ-Vn-9rE">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5Ya-ud-dqa"/>
+                        <outlet property="delegate" destination="-1" id="miB-Dt-OCI"/>
+                    </connections>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="EdK-Dv-gBB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="010-lk-W6s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EdK-Dv-gBB" secondAttribute="trailing" id="cdw-5K-igY"/>
+                <constraint firstItem="PSO-LO-iCt" firstAttribute="top" secondItem="EdK-Dv-gBB" secondAttribute="top" id="ey8-dx-Wxz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EdK-Dv-gBB" secondAttribute="bottom" id="jeT-QT-lUu"/>
+                <constraint firstItem="PSO-LO-iCt" firstAttribute="trailing" secondItem="EdK-Dv-gBB" secondAttribute="trailing" id="lU0-mi-XvJ"/>
+                <constraint firstItem="PSO-LO-iCt" firstAttribute="bottom" secondItem="EdK-Dv-gBB" secondAttribute="bottom" id="sHq-Cw-jOE"/>
                 <constraint firstItem="EdK-Dv-gBB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="u4E-Oi-Ee2"/>
+                <constraint firstItem="PSO-LO-iCt" firstAttribute="leading" secondItem="EdK-Dv-gBB" secondAttribute="leading" id="wH5-ZB-qYw"/>
             </constraints>
             <point key="canvasLocation" x="132" y="53"/>
         </view>
